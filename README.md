@@ -1,14 +1,14 @@
 # XOR Gate Implementation Using NumPy and TensorFlow
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Manual Implementation](#manual-implementation)
-- [TensorFlow Implementation](#tensorflow-implementation)
-- [How It Works](#how-it-works)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Results](#results)
-- [Why This Matters](#why-this-matters)
+- [📝 Introduction](#-introduction)
+- [⚙️ Manual Implementation](#️-manual-implementation)
+- [🤖 TensorFlow Implementation](#-tensorflow-implementation)
+- [🔬 How It Works](#-how-it-works)
+- [🛠 Installation](#-installation)
+- [▶️ Usage](#️-usage)
+- [📊 Results](#-results)
+- [🌟 Why This Matters](#-why-this-matters)
 
 ---
 
@@ -89,7 +89,7 @@ Ensure you have the required dependencies installed:
 
 ```bash
 pip install numpy tensorflow
-```
+
 
 ## ▶️ Usage
 
