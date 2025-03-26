@@ -93,16 +93,6 @@ pip install numpy tensorflow
 
 ---
 
-## ▶️ Usage
-
-Run the script to execute both implementations:
-
-```bash
-python xor_gate.py
-```
-
----
-
 ## 📊 Results
 
 After running the script, you should see:
