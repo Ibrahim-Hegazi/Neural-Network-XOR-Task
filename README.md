@@ -96,7 +96,7 @@ Run the script to execute both implementations:
 
 ```bash
 python xor_gate.py
-
+```
 
 ## 📊 Results
 
@@ -109,7 +109,7 @@ XOR Gate Truth Table:
 0, 1: 1
 1, 0: 1
 1, 1: 0
-
+```
 
 ## 🤖 TensorFlow Model Predictions:
 
