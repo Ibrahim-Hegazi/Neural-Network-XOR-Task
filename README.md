@@ -89,7 +89,9 @@ Ensure you have the required dependencies installed:
 
 ```bash
 pip install numpy tensorflow
+```
 
+---
 
 ## ▶️ Usage
 
@@ -97,7 +99,9 @@ Run the script to execute both implementations:
 
 ```bash
 python xor_gate.py
+```
 
+---
 
 ## 📊 Results
 
@@ -112,6 +116,8 @@ XOR Gate Truth Table:
 1, 1: 0
 ```
 
+---
+
 ## 🤖 TensorFlow Model Predictions:
 
 XOR Predictions:
@@ -120,6 +126,7 @@ XOR Predictions:
 [1. 0.] → 1 (expected: 1)
 [1. 1.] → 0 (expected: 0)
 
+---
 
 ## 🌟 Why This Matters
 
