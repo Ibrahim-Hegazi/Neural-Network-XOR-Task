@@ -89,3 +89,45 @@ Ensure you have the required dependencies installed:
 
 ```bash
 pip install numpy tensorflow
+
+## ▶️ Usage
+
+Run the script to execute both implementations:
+
+```bash
+python xor_gate.py
+
+
+## 📊 Results
+
+After running the script, you should see:
+
+### 🛠 Manual Implementation:
+```yaml
+XOR Gate Truth Table:
+0, 0: 0
+0, 1: 1
+1, 0: 1
+1, 1: 0
+
+
+## 🤖 TensorFlow Model Predictions:
+
+XOR Predictions:
+[0. 0.] → 0 (expected: 0)
+[0. 1.] → 1 (expected: 1)
+[1. 0.] → 1 (expected: 1)
+[1. 1.] → 0 (expected: 0)
+
+
+## 🌟 Why This Matters
+
+XOR is non-linearly separable, requiring a multi-layered neural network.
+
+Logic gates can be approximated using sigmoid activation.
+
+Deep learning provides an automated way to learn these patterns instead of hardcoding logic.
+
+Understanding XOR helps in learning more complex neural network architectures.
+
+
