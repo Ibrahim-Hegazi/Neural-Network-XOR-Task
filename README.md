@@ -6,7 +6,6 @@
 - [🤖 TensorFlow Implementation](#-tensorflow-implementation)
 - [🔬 How It Works](#-how-it-works)
 - [🛠 Installation](#-installation)
-- [▶️ Usage](#️-usage)
 - [📊 Results](#-results)
 - [🌟 Why This Matters](#-why-this-matters)
 
