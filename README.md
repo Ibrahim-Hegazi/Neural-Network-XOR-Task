@@ -1,59 +1,91 @@
 # XOR Gate Implementation Using NumPy and TensorFlow
 
-This repository contains two different implementations of an XOR gate:  
-1. **A handcrafted neural network using NumPy** (simulating logic gates with the sigmoid function).  
-2. **A trainable neural network using TensorFlow/Keras** (learning XOR via a multi-layer perceptron).  
+## Table of Contents
+- [Introduction](#introduction)
+- [Manual Implementation](#manual-implementation)
+- [TensorFlow Implementation](#tensorflow-implementation)
+- [How It Works](#how-it-works)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Results](#results)
+- [Why This Matters](#why-this-matters)
 
-## 🚀 Under the Hood  
+---
 
-### 1️⃣ XOR Gate with NumPy (Manually Designed Neural Network)
+## 📝 Introduction
 
-This implementation simulates an XOR gate using a combination of logic gates (AND, OR, NAND). The core idea is to use a **sigmoid activation function** to approximate these gates.  
+This repository demonstrates two ways to implement an **XOR gate** using **Neural Networks**:
+1. **A handcrafted implementation using NumPy** that mimics logic gates.
+2. **A trainable neural network using TensorFlow/Keras** that learns XOR through training.
 
-#### 🔢 **Mathematical Representation**  
+The XOR function is a fundamental example of **non-linearly separable** problems, making it an ideal starting point for understanding neural networks.
 
-Each gate is modeled using the function:  
+---
+
+## ⚙️ Manual Implementation
+
+The first approach manually simulates an XOR gate using logic gates implemented with the **sigmoid activation function**. 
+
+### 🏗 How It Works:
+- **Logic Gates:** XOR can be created using **NAND, OR, and AND** gates.
+- **Sigmoid Activation:** Used to approximate these logic gates.
+- **Layered Computation:** The first layer computes OR and NAND, and the second layer applies an AND operation.
+
+### 📌 Mathematical Representation:
+Each gate follows the equation:
 \[
 f(x_1, x_2) = \sigma(w_1 \cdot x_1 + w_2 \cdot x_2 + b)
 \]
 where:
-- \( \sigma(z) = \frac{1}{1 + e^{-z}} \) is the sigmoid function.
-- \( w_1, w_2 \) are weights.
-- \( b \) is the bias.
+- \( \sigma(z) = \frac{1}{1 + e^{-z}} \) (Sigmoid function)
+- \( w_1, w_2 \) are weights
+- \( b \) is a bias term
 
-#### 🏗 **Gate Combinations for XOR**
-- **OR Gate:** Approximated with high positive weights.
-- **NAND Gate:** Approximated with high negative weights.
-- **AND Gate:** Used to combine results of OR and NAND to produce XOR.
+### ✅ XOR Truth Table:
+| x1 | x2 | XOR Output |
+|----|----|-----------|
+| 0  | 0  | 0         |
+| 0  | 1  | 1         |
+| 1  | 0  | 1         |
+| 1  | 1  | 0         |
 
-##### **Truth Table Validation**
-The implementation prints the XOR truth table:
+---
 
-| Input (x1, x2) | Output |
-|---------------|--------|
-| (0, 0)       | 0      |
-| (0, 1)       | 1      |
-| (1, 0)       | 1      |
-| (1, 1)       | 0      |
+## 🤖 TensorFlow Implementation
 
-### 2️⃣ XOR Gate with TensorFlow (Trainable Neural Network)
+The second approach uses **TensorFlow/Keras** to build a **feedforward neural network** that learns XOR through training.
 
-This implementation builds and trains a **2-layer feedforward neural network** using **TensorFlow/Keras**.
+### 🏗 Neural Network Architecture:
+- **Input Layer:** Two neurons (for x1 and x2).
+- **Hidden Layer:** Two neurons with **ReLU activation**.
+- **Output Layer:** One neuron with **Sigmoid activation**.
 
-#### 📌 **Model Architecture**
-- **Input Layer:** Takes 2 inputs (x1, x2).
-- **Hidden Layer:** 2 neurons with **ReLU activation**.
-- **Output Layer:** 1 neuron with **sigmoid activation** (binary classification).
+### 🏋️ Training Details:
+- **Loss Function:** Binary Crossentropy
+- **Optimizer:** Adam
+- **Epochs:** 1000
 
-#### 🎯 **Training**
-- Loss function: **Binary Crossentropy**
-- Optimizer: **Adam**
-- Training for **1000 epochs**.
+After training, the model learns to correctly predict the XOR function.
 
-##### **Predictions**
-After training, the model predicts the XOR output with high accuracy.
+---
 
-## 📦 Dependencies
+## 🔬 How It Works
+
+### Manual XOR Logic:
+1. Compute **OR** and **NAND** of inputs.
+2. Use an **AND** gate to combine these results.
+3. The final output follows the XOR pattern.
+
+### TensorFlow XOR Learning:
+1. The model initializes with **random weights**.
+2. It **adjusts weights** using backpropagation and gradient descent.
+3. Over **1000 training epochs**, it learns the XOR pattern.
+
+---
+
+## 🛠 Installation
+
 Ensure you have the required dependencies installed:
+
 ```bash
 pip install numpy tensorflow
